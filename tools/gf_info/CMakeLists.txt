@@ -5,5 +5,5 @@ target_link_libraries(gf_info gf0)
 install(
   TARGETS gf_info
   RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
-  COMPONENT Tools
+  COMPONENT Runtime
 )

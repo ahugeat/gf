@@ -520,13 +520,13 @@ install(
   EXPORT gfTargets
   NAMESPACE gf::
   DESTINATION "${CMAKE_INSTALL_LIBDIR}/cmake/gf"
-  COMPONENT Runtime
+  COMPONENT Development
 )
 
 install(
   FILES gfConfig.cmake
   DESTINATION "${CMAKE_INSTALL_LIBDIR}/cmake/gf"
-  COMPONENT Runtime
+  COMPONENT Development
 )
 
 include(CMakePackageConfigHelpers)
@@ -540,5 +540,5 @@ write_basic_package_version_file(
 install(
   FILES "${CMAKE_CURRENT_BINARY_DIR}/gfConfigVersion.cmake"
   DESTINATION "${CMAKE_INSTALL_LIBDIR}/cmake/gf"
-  COMPONENT Runtime
+  COMPONENT Development
 )
