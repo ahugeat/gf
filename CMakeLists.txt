@@ -123,7 +123,7 @@ if (UNIX AND NOT APPLE)
   endif()
 
   set(CPACK_DEBIAN_FILE_NAME "${CPACK_DEBIAN_PACKAGE_NAME}-${CMAKE_PROJECT_VERSION}${GF_PACKAGE_SUFFIX}.deb")
-  set(CPACK_DEBIAN_RUNTIME_FILE_NAME "${CPACK_DEBIAN_FILE_NAME}.deb")
+  set(CPACK_DEBIAN_RUNTIME_FILE_NAME "${CPACK_DEBIAN_FILE_NAME}")
 
   string(TOLOWER "${CPACK_DEBIAN_FILE_NAME}" CPACK_DEBIAN_FILE_NAME)
   set(CPACK_PACKAGE_DESCRIPTION "Gamedev Framework (gf) is a framework to build 2D games in C++17. It is based on SDL and OpenGL ES 2.0, and presents an API that is very similar to the graphics module of SFML with additional features.")
