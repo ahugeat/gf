@@ -5,6 +5,7 @@ macro(add_gf_example NAME)
   install(
     TARGETS "${NAME}"
     DESTINATION "${CMAKE_INSTALL_DOCDIR}/examples"
+    COMPONENT Documentation
   )
 endmacro()
 
