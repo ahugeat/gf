@@ -496,6 +496,7 @@ install(
     "${CMAKE_CURRENT_BINARY_DIR}/GraphicsApi.h"
     "${CMAKE_CURRENT_BINARY_DIR}/NetApi.h"
   DESTINATION "${CMAKE_INSTALL_INCLUDEDIR}/gf"
+  COMPONENT Development
 )
 
 install(
@@ -504,6 +505,7 @@ install(
   LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
   ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
   RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
+  COMPONENT Runtime
 )
 
 if(WIN32 AND BUILD_SHARED_LIBS)
@@ -517,11 +519,13 @@ install(
   EXPORT gfTargets
   NAMESPACE gf::
   DESTINATION "${CMAKE_INSTALL_LIBDIR}/cmake/gf"
+  COMPONENT Runtime
 )
 
 install(
   FILES gfConfig.cmake
   DESTINATION "${CMAKE_INSTALL_LIBDIR}/cmake/gf"
+  COMPONENT Runtime
 )
 
 include(CMakePackageConfigHelpers)
@@ -535,4 +539,5 @@ write_basic_package_version_file(
 install(
   FILES "${CMAKE_CURRENT_BINARY_DIR}/gfConfigVersion.cmake"
   DESTINATION "${CMAKE_INSTALL_LIBDIR}/cmake/gf"
+  COMPONENT Runtime
 )
